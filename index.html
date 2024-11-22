@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google 認證與會員註冊</title>
+    <link rel="stylesheet" href="style.css"> <!-- 引入 CSS 檔案 -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Google認證與會員註冊</h1>
+
+        <!-- 登入表單 -->
+        <div id="login-form">
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="請輸入電子郵件" required>
+                <input type="password" id="password" placeholder="請輸入密碼" required>
+                <button type="submit" id="login-btn">登入</button>
+            </form>
+            <button id="switch-to-register-btn">註冊</button> <!-- 切換到註冊表單的按鈕 -->
+            <button id="google-login-btn">使用 Google 登入</button>
+        </div>
+
+        <!-- 註冊表單 -->
+        <div id="register-form" style="display: none;">
+            <form id="registrationForm">
+                <input type="email" id="registerEmail" placeholder="請輸入電子郵件" required>
+                <input type="password" id="registerPassword" placeholder="請輸入密碼" required>
+                <button type="submit" id="register-btn">註冊</button>
+            </form>
+            <button id="switch-to-login-btn">已有帳號，登入</button> <!-- 切換回登入表單的按鈕 -->
+            <button id="google-login-btn">使用 Google 登入</button><!-- 帶修正 -->
+        </div>
+
+        <!-- 顯示用戶資訊 -->
+        <div id="user-info" style="display: none;">
+            <img id="profile-pic" src="" alt="Profile Picture">
+            <h2 id="user-name"></h2>
+            <p id="user-email"></p>
+            <p id="last-login" class="last-login"></p>
+            <button id="logout-btn">登出</button>
+        </div>
+    </div>
+
+    <script type="module" src="auth.js"></script> <!-- 引入 JavaScript 檔案 -->
+</body>
+
+</html>
